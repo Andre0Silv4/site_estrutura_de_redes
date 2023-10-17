@@ -21,6 +21,7 @@ h1 {
     font-weight: 700;
     line-height: 48px;
     /* 120% */
+    z-index: 0;
 }
 
 .menu {
@@ -35,7 +36,7 @@ h1 {
     padding-top: 80px;
     /*Estilização*/
     background: #5BC48F;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.12);
 }
 
 .banner {
@@ -53,6 +54,7 @@ h1 {
     border: 1px solid rgba(146, 223, 144, 0.10);
     background: rgba(146, 223, 144, 0.45);
     backdrop-filter: blur(13px);
+    box-shadow: 0 0 10px 0 #465641;
 }
 
 .container {
@@ -60,7 +62,7 @@ h1 {
     position: a;
     display: flex;
     width: 1021px;
-    height: 187px;
+    height: 190px;
     flex-direction: column;
     align-items: center;
     gap: 24px;
@@ -69,6 +71,7 @@ h1 {
     border: 5px solid rgba(146, 223, 144, 0.01);
     background: rgba(171, 243, 221, 0.45);
     backdrop-filter: blur(13px);
+    box-shadow: 0 0 3px 0 #465641;
 }
 
 .banner_conteudo {
@@ -96,6 +99,7 @@ h1 {
     font-weight: 400;
     line-height: 24px;
     /* 150% */
+    z-index: 0;
 }
 
 .botoes {
@@ -105,6 +109,7 @@ h1 {
     bottom: 5%;
     right: 35%;
     gap: 12px;
+    z-index: 1;
 }
 
 .botao1 {
@@ -115,10 +120,16 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 
     border-radius: 8px;
     border: 2px solid #FFF;
     background: #7eb36e;
+
+}
+
+.botao1:hover {
+    background: transparent;
 }
 
 .txt1 {
@@ -127,17 +138,23 @@ h1 {
 }
 
 .botao2 {
-    display: flex;
+    display: block;
     width: 160px;
     height: 40px;
     padding: 12px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 
     border-radius: 8px;
     border: 2px solid #465641;
     background-color: transparent;
+}
+
+.bota2:hover {
+    border: 2px solid #465641;
+    background-color: #00ff80;
 }
 
 .txt2 {
@@ -176,10 +193,10 @@ h1 {
 }
 
 .bola04 {
-    position: absolute;
+    position: fixed;
     bottom: -20%;
     right: 78%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .bola05 {
@@ -203,6 +220,19 @@ h1 {
     bottom: 65%;
     right: 5%;
     z-index: 1;
+}
+
+.bola08{
+    position: fixed;
+    z-index: -1;
+    right: 10%;
+    bottom: 40%;
+}
+
+.bola09{
+    position: fixed;
+    z-index: -1;
+    bottom: 50%;
 }
 
 .circulo01 {
@@ -248,6 +278,7 @@ h1 {
     align-items: center;
     gap: 24px;
     flex: 1 0 0;
+    
 }
 
 .lista {
@@ -265,19 +296,10 @@ h1 {
     align-items: center;
     flex: 1 0 0;
 
-    border-radius: 6px;
-    border: 1px solid #7DD6A6;
-}
-
-.card:h4 {
-    color: #000;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    /* 150% */
+    border: 3px solid rgba(54, 199, 243, 0.01);
+    background: rgba(171, 243, 221, 0.20);
+    backdrop-filter: blur(13px);
+    box-shadow: 0 0 3px 0 #465641;
 }
 
 .card_img {
@@ -305,8 +327,9 @@ h1 {
     justify-content: center;
     align-items: center;
 
-    border-radius: 8px 0px;
-    background: rgba(238, 5, 5, 0.05);
+    border: 5px solid rgba(123, 243, 54, 0.01);
+    background: rgba(111, 233, 100, 0.20);
+    backdrop-filter: blur(13px);
 }
 
 .arquitetura1 {
@@ -316,6 +339,7 @@ h1 {
     align-items: center;
     gap: 60px;
     align-self: stretch;
+
 }
 
 .container2 {
@@ -332,6 +356,11 @@ h1 {
     align-items: flex-start;
     gap: 12px;
     background: #52B081;
+    border-radius: 10% 10% 10%;
+}
+
+.botao3:hover {
+    background: #00ff80;
 }
 
 .txt3 {
@@ -371,8 +400,10 @@ h1 {
     gap: 16px;
     flex: 1 0 0;
 
-    border-radius: 6px;
-    border: 1px solid #ABD7BF;
+    border: 3px solid rgba(37, 238, 30, 0.01);
+    background: rgba(171, 243, 221, 0.15);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 3px 0 #465641;
 }
 
 .card_img2 {
@@ -382,6 +413,11 @@ h1 {
     align-items: flex-start;
 
     background: #7DD6A6;
+}
+
+.card_img2:hover {
+    width: 450px;
+    height: 220px;
 }
 
 .card_imagem {
@@ -406,10 +442,30 @@ h1 {
     align-self: stretch;
 }
 
-.container3{
+.container3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
     flex: 1 0 0;
+}
+
+.lista3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex: 1 0 0;
+}
+
+.card_curiosidade {
+    padding: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+
+    border-radius: 6px;
+    background: #ABD7BF;
 }
